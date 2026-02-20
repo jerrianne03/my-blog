@@ -1,0 +1,213 @@
+/* General */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0b0f;
+    color: #eaeaea;
+}
+
+
+/* Navbar */
+
+.navbar {
+    background: #0b0b0f !important;
+}
+
+
+/* Hero & Glow Sections */
+
+.glow-section {
+    position: relative;
+    background: #0b0b0f;
+    overflow: hidden;
+    color: white;
+    padding: 120px 0;
+}
+
+.glow-section::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(138, 43, 226, 0.6), transparent 70%);
+    top: -150px;
+    left: -150px;
+    filter: blur(80px);
+    z-index: 0;
+}
+
+.glow-section::after {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 0, 150, 0.5), transparent 70%);
+    bottom: -150px;
+    right: -150px;
+    filter: blur(80px);
+    z-index: 0;
+}
+
+.glow-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Profile Image */
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.6);
+}
+
+
+/* About, Skills, Blog Sections Gradient */
+
+#about,
+#skills,
+#blog {
+    background: linear-gradient(to bottom, #f8f7f3, #d1cdc6, #0b0b0f);
+    color: #0b0b0f;
+    padding: 80px 0;
+}
+
+
+/* Headings */
+
+#about h2,
+#skills h2,
+#blog h2 {
+    color: #0b0b0f;
+}
+
+
+/* Text */
+
+#about p,
+#about ul.quick-facts li,
+#skills .skill-card,
+#blog .blog-card .card-body h5,
+#blog .blog-card .card-body p {
+    color: #0b0b0f;
+}
+
+
+/* Quick Facts */
+
+#about ul.quick-facts {
+    list-style: none;
+    padding-left: 0;
+}
+
+#about ul.quick-facts li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+#about ul.quick-facts li::before {
+    content: "•";
+    color: #8e44ad;
+    position: absolute;
+    left: 0;
+}
+
+
+/* Cards */
+
+.skill-card,
+.blog-card {
+    background: rgba(255, 255, 255, 0.2);
+    color: #0b0b0f;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+    padding: 20px;
+}
+
+.skill-card:hover,
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
+}
+
+
+/* Icons */
+
+.skill-card i,
+.blog-card i {
+    color: #8e44ad;
+    margin-bottom: 10px;
+}
+
+
+/* Blog Buttons */
+
+.blog-card .btn-outline-dark {
+    border-color: #0b0b0f;
+    color: #0b0b0f;
+}
+
+.blog-card .btn-outline-dark:hover {
+    background-color: #0b0b0f;
+    color: #ffffff;
+}
+
+
+/* Forms */
+
+.form-control {
+    background: rgba(155, 153, 153, 0.05);
+    border: none;
+    color: white;
+}
+
+.form-control::placeholder {
+    color: #bbb;
+}
+
+
+/* Footer */
+
+.footer {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: #8e44ad;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #d39be0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    form.w-50 {
+        width: 90% !important;
+    }
+    .footer-right {
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
